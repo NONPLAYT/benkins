@@ -1,0 +1,32 @@
+name: Minifier
+
+on:
+  push:
+    branches:
+    - gh-pages
+    paths:
+    - 'resources/style.css'
+
+jobs:
+  minify:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checking out Repository
+      uses: actions/checkout@v3
+      with:
+        ref: gh-pages
+
+    - name: Auto Minify
+      uses: nizarmah/auto-minify@v2.1
+      with:
+        directory: 'resources'
+
+    - name: Auto committing minified files
+      uses: stefanzweifel/git-auto-commit-action@v4.13.1
+      with: 
+        repository: 'resources'
+        commit_message: "Automatically minified resources directory"
+        branch: ${{ github.ref }}
+        token: ${{ secrets.ACCESS_TOKEN }}

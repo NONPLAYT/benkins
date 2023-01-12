@@ -1,0 +1,47 @@
+{
+    "name": "maven-builds-server",
+    "version": "1.0.0",
+    "description": "A simple Builds Server for Maven Projects",
+    "main": "src/single-run.js",
+    "scripts": {
+        "iteration": "node ./src/single-run.js",
+        "regen": "node ./src/force-update.js",
+        "test": "nyc --reporter=lcov --reporter=text-lcov mocha test/*.js --reporter mocha-multi-reporters --reporter-options configFile=resources/mocha.json",
+        "sonar": "node ./src/sonar.js",
+        "formatter": "standard --fix || true"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NONPLAYT/benkins.git"
+    },
+    "author": "NONPLAYT",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/NONPLAYT/benkins/issues"
+    },
+    "homepage": "https://github.com/NONPLAYT/benkins#readme",
+    "dependencies": {
+        "child-process-promise": "^2.2.1",
+        "discord.js": "^13.0.0",
+        "lodash": "^4.17.19",
+        "request": "^2.88.0",
+        "request-promise-native": "^1.0.7",
+        "xml-library": "0.2.0"
+    },
+    "devDependencies": {
+        "chai": "4.3.6",
+        "chai-as-promised": "7.1.1",
+        "mocha": "10.0.0",
+        "mocha-multi-reporters": "1.5.1",
+        "mocha-sonarqube-reporter": "1.0.2",
+        "nyc": "15.1.0",
+        "standard": "17.0.0"
+    },
+    "standard": {
+        "ignore": [
+            "test/*.js",
+            "src/index.js",
+            "src/frontend.js"
+        ]
+    }
+}

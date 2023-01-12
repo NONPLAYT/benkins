@@ -1,0 +1,49 @@
+name: Build Bot
+
+on:
+  # Manual workflow trigger
+  workflow_dispatch: {}
+
+  # Run every ~10 minutes
+  schedule:
+  - cron: '*/10 * * * *'
+
+jobs:
+  runner:
+
+    name: Automatic project builder
+    runs-on: ubuntu-latest
+    env:
+      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+    steps:
+    - name: Checking out Repository
+      uses: actions/checkout@v3.1.0
+      with:
+        ref: gh-pages
+
+    - name: Setting up Java 17
+      uses: actions/setup-java@v3.6.0
+      with:
+        distribution: 'adopt'
+        java-version: '17'
+        java-package: jdk
+        architecture: x64
+
+    - name: Setting up node.js
+      uses: actions/setup-node@v3.5.1
+      with:
+        node-version: '16.6.0'
+
+    - name: Installing dependencies
+      run: npm install
+
+    - name: Setting up git environment
+      run: sh src/setup.sh
+      env:
+        LOGIN_EMAIL: ${{ secrets.LOGIN_EMAIL }}
+
+    - name: Running builds program
+      run: node src/single-run.js
+      env:
+        JSON_CONFIG: ${{ secrets.JSON_CONFIG }}

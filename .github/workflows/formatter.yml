@@ -1,0 +1,38 @@
+name: Code Formatter
+
+on:
+  push:
+    branches:
+    - gh-pages
+    paths:
+    - 'src/*.js'
+
+jobs:
+  formatter:
+
+    name: Standard Formatting
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checking out Repository
+      uses: actions/checkout@v3.1.0
+      with:
+        ref: gh-pages
+
+    - name: Setting up node.js
+      uses: actions/setup-node@v3.5.1
+      with:
+        node-version: '16.6.0'
+
+    - name: Installing dependencies
+      run: npm install
+
+    - name: Run Auto Formatter
+      run: npm run formatter
+
+    - name: Auto Commit
+      uses: stefanzweifel/git-auto-commit-action@v4.13.1
+      with: 
+        commit_message: "Auto-Formatter"
+        branch: ${{ github.ref }}
+        token: ${{ secrets.ACCESS_TOKEN }}
