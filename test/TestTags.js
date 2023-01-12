@@ -6,12 +6,12 @@ module.exports = (assert, github) => {
 
         testJobs(false, (job) => github.getTags(job));
 
-        it("should resolve for 'NONPLAYT/GitHubWebAPI4Java'", () => {
+        it("should resolve for 'TheBusyBiscuit/GitHubWebAPI4Java'", () => {
             var job = {
-                author: "NONPLAYT",
+                author: "TheBusyBiscuit",
                 repo: "GitHubWebAPI4Java",
                 branch: "master",
-                directory: "NONPLAYT/GitHubWebAPI4Java/master"
+                directory: "TheBusyBiscuit/GitHubWebAPI4Java/master"
             }
 
             return github.getTags(job).then((tags) => Promise.all([
