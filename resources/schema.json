@@ -34,7 +34,7 @@
         },
         "options": {
           "type": "object",
-          "required": ["prefix"],
+          "required": ["prefix", "buildTool"],
           "additionalProperties": false,
 
           "properties": {
@@ -52,6 +52,9 @@
             },
             "ignoreTags": {
               "type": "boolean"
+            },
+            "buildTool": {
+              "type": "string"
             }
           }
         },

@@ -7,7 +7,7 @@ const chai = require('chai');
 chai.use(require('chai-as-promised'));
 const { assert } = chai;
 
-const testJobs = require('../test/TestJobs.js');
+const testJobs = require('./TestJobs.js');
 
 // A public sample Maven project
 var job = {
@@ -17,7 +17,9 @@ var job = {
     directory: "jitpack/maven-simple/master"
 }
 
-describe("Full System Test", function() {
+describe("Full Maven System Test", function() {
+    job.options = Object;
+    job.options.buildTool = 'maven';
     this.timeout(60000);
 
     before(() => {
