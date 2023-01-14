@@ -6,7 +6,8 @@
             "options": {
                 "prefix": "DEV",
                 "abandoned": false,
-                "createJar": true
+                "createJar": true,
+                "buildTool": "maven"
             },
             "dependencies": {
                 "Minecraft Version(s)": {
