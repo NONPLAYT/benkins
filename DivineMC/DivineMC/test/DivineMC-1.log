@@ -1,0 +1,50 @@
+Downloading https://services.gradle.org/distributions/gradle-7.5.1-bin.zip
+...........10%............20%...........30%............%.40..........50%............60%...........70%............80%...........90%............100%
+
+Welcome to Gradle 7.5.1!
+
+Here are the highlights of this release:
+ - Support for Java 18
+ - Support for building with Groovy 4
+ - Much more responsive continuous builds
+ - Improved diagnostics for dependency resolution
+
+For more details see https://docs.gradle.org/7.5.1/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :compileJava NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :jar
+> Task :assemble
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test NO-SOURCE
+> Task :check UP-TO-DATE
+> Task :build
+> Task :divinemc-api:compileJava NO-SOURCE
+> Task :divinemc-api:processResources NO-SOURCE
+> Task :divinemc-api:classes UP-TO-DATE
+> Task :divinemc-api:jar
+> Task :divinemc-api:assemble
+> Task :divinemc-api:compileTestJava NO-SOURCE
+> Task :divinemc-api:processTestResources NO-SOURCE
+> Task :divinemc-api:testClasses UP-TO-DATE
+> Task :divinemc-api:test NO-SOURCE
+> Task :divinemc-api:check UP-TO-DATE
+> Task :divinemc-api:build
+> Task :divinemc-server:compileJava NO-SOURCE
+> Task :divinemc-server:processResources NO-SOURCE
+> Task :divinemc-server:classes UP-TO-DATE
+> Task :divinemc-server:jar
+> Task :divinemc-server:assemble
+> Task :divinemc-server:compileTestJava NO-SOURCE
+> Task :divinemc-server:processTestResources NO-SOURCE
+> Task :divinemc-server:testClasses UP-TO-DATE
+> Task :divinemc-server:test NO-SOURCE
+> Task :divinemc-server:check UP-TO-DATE
+> Task :divinemc-server:build
+
+BUILD SUCCESSFUL in 1m 15s
+3 actionable tasks: 3 executed
