@@ -24,8 +24,7 @@ module.exports = {
 function getGradleArguments () {
   if (!job.options.mccore) {
     return ['build']
-  }
-  else {
+  } else {
     return ['createReobfPaperclipJar']
   }
 }
