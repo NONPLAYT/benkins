@@ -20,12 +20,13 @@ module.exports = {
  * This will return the console line arguments for gradle.compile()
  *
  * @return {Array<String>}   The needed console line arguments
+ * @param  {Object} job      The currently handled Job Object
  */
-function getGradleArguments () {
-  if (!job.options.mccore) {
-    return ['build']
-  } else {
+function getGradleArguments (job) {
+  if (job.options.mccore) {
     return ['createReobfPaperclipJar']
+  } else {
+    return ['build']
   }
 }
 
@@ -64,7 +65,7 @@ function setVersion (job, version) {
 
 /**
  * This method will compile a project using the command
- * 'gradlew build'
+ * 'gradlew build' or  'gradlew createReobfPaperclipJar' if the project is a mccore project
  *
  * @param  {Object} job      The currently handled Job Object
  * @param  {Boolean} logging Whether the internal activity should be logged
