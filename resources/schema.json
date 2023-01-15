@@ -55,6 +55,9 @@
             },
             "buildTool": {
               "type": "string"
+            },
+            "mccore": {
+              "type": "boolean"
             }
           }
         },
