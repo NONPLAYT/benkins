@@ -11,8 +11,7 @@ This kinda serves as a **"Continous Integration/Deployment"** Service for Maven 
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=NONPLAYT_benkins&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=NONPLAYT_benkins)
 
 ## How to add my project in benkins?
-This is a very simple process. Just create this issue [here](https://github.com/NONPLAYT/benkins/issues/new?assignees=&labels=request&template=project_add_request.yml) and fill out the form. If you fill out the form correctly, your project will be added to the list soon.
-
+Just create a pull request to this repository and add your project to the **'resources/repos.json'** file. Example repos.json file is below. Or just create this issue [here](https://github.com/NONPLAYT/benkins/issues/new?assignees=&labels=request&template=project_add_request.yml) and fill out the form.
 ## How it works?
 The code itself is basically just a basic node.js Program.<br>
 It reads repositories from 'resources/repos.json' and connects to the GitHub-API.<br>
