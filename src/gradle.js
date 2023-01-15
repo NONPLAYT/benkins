@@ -22,12 +22,8 @@ module.exports = {
  * @return {Array<String>}   The needed console line arguments
  * @param  {Object} job      The currently handled Job Object
  */
-function getGradleArguments (job) {
-  if (job.options.mccore) {
-    return ['createReobfPaperclipJar']
-  } else {
-    return ['build']
-  }
+function getGradleArguments () {
+  return ['build']
 }
 
 /**
@@ -85,7 +81,7 @@ function compile (job, logging) {
       shell: true
     })
 
-    log(logging, "-> Executing './gradlew build/createReobfPaperclipJar'")
+    log(logging, "-> Executing './gradlew build'")
 
     const args = getGradleArguments()
     const compiler = process.spawn('./gradlew', args, {

@@ -14,22 +14,5 @@
                 "1": "1.13.x - 1.19.x"
             }
         }
-    },
-    "DivineMC/DivineMC:master": {
-        "sonar": {
-            "enabled": false
-        },
-        "options": {
-            "prefix": "DEV",
-            "abandoned": false,
-            "createJar": true,
-            "buildTool": "gradle",
-            "mccore": true
-        },
-        "dependencies": {
-            "Minecraft Version(s)": {
-                "1": "1.19.3"
-            }
-        }
     }
 }
