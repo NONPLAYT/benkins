@@ -1,0 +1,40 @@
+name: Project Add Request
+description: Request to add your project to the website.
+labels: 'request'
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this template! Fill out the following form to add your project faster. 
+        For anything else, use: [our Discord server](https://discord.gg/p7cxhw7E2M).
+
+  - type: dropdown
+    attributes:
+      label: Build tool
+      description: Which build tool are you using? If your build tool is not listed, it is not supported. Update to a supported build tool first. 
+      multiple: false
+      options:
+        - Maven
+        - Gradle
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Link to your project
+      description: Please provide a link to your project on GitHub.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Executable Jar file prefix
+      description: What the builds will be prefixed with. "DEV" would make builds like "AwesomeProject - DEV 1 (githash)"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Anything else?
+      description: You can provide additional context below, like do you need createJar to be true or false, or if you need to add a dependency and etc.
