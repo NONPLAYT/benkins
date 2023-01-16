@@ -1,6 +1,6 @@
 # Benkins - Maven & Gradle Builds Server
 
-This is the repository of the backend for builds-page. The page can be found [here](https://nonplayt.github.io/benkins)
+This is the repository of the backend for builds-page. The page can be found [here](https://ci.bxteam.gq)
 
 This kinda serves as a **"Continous Integration/Deployment"** Service for Maven & Gradle Projects which utilises static GitHub Pages. 
 

@@ -1,5 +1,5 @@
 $(function() {
-    $.getJSON("https://nonplayt.github.io/benkins/resources/repos.json", repos => {
+    $.getJSON("https://ci.bxteam.gq/resources/repos.json", repos => {
         $("#repos").html("");
         let profiles = [];
 
@@ -65,7 +65,7 @@ function addRepository(table, directory, owner, repo, branch, projectType) {
                 <a class="link_info" href="${directory}">${repo} (${branch})${projectType == 'abandoned' ? " [abandoned]" : ""}</a>
             </td>
             <td>
-                <img class="badge" alt="project badge" src="https://nonplayt.github.io/benkins/${directory}/badge.svg" />
+                <img class="badge" alt="project badge" src="https://ci.bxteam.gq/${directory}/badge.svg" />
             </td>
         </tr>
     `);

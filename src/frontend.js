@@ -4,7 +4,7 @@ $(() => {
     let repository = body.attr("repository");
     let branch = body.attr("branch");
 
-    $.getJSON("https://nonplayt.github.io/benkins/resources/repos.json", repos => {
+    $.getJSON("https://ci.bxteam.gq/resources/repos.json", repos => {
         let info = repos[`${owner}/${repository}:${branch}`];
         let directory = `${owner}/${repository}/${branch}`;
 
@@ -132,7 +132,7 @@ $(() => {
             }
         }
 
-        $.getJSON(`https://nonplayt.github.io/benkins/${directory}/builds.json`, builds => {
+        $.getJSON(`https://ci.bxteam.gq/${directory}/builds.json`, builds => {
             let last_successful = builds.last_successful;
 
             // Get currently selected Build
@@ -221,9 +221,9 @@ function createBadge(directory, language) {
     var url = "";
 
     if (language === "markdown") {
-        url = `[![Build Status](https://nonplayt.github.io/benkins/${directory}/badge.svg)](https://nonplayt.github.io/benkins/${directory})`;
+        url = `[![Build Status](https://ci.bxteam.gq/${directory}/badge.svg)](https://ci.bxteam.gq/${directory})`;
     } else if (language === "html") {
-        url = `<a href="https://nonplayt.github.io/benkins/${directory}"><img src="https://nonplayt.github.io/benkins/${directory}/badge.svg" alt="Build Status"/></a>`;
+        url = `<a href="https://ci.bxteam.gq/${directory}"><img src="https://ci.bxteam.gq/${directory}/badge.svg" alt="Build Status"/></a>`;
     }
 
     $("#badge_" + language).attr("value", url);
