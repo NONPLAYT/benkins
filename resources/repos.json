@@ -1,8 +1,5 @@
 {
     "BX-Team/NDailyRewards:master": {
-        "sonar": {
-            "enabled": false
-        },
         "options": {
             "prefix": "DEV",
             "abandoned": false,

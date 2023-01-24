@@ -21,10 +21,6 @@ It reads repositories from 'resources/repos.json' and connects to the GitHub-API
     // ...
     // Replace this with your username, repo and branch you wish to publish. For example: AwesomeUser/AwesomeProject:main
     "User/Repo:branch": {
-        // Enabling sonar will make the build fail if the sonar quality gate fails. This is only supported for maven projects and not yet implemented to benkins.
-        "sonar": {
-            "enabled": false
-        },
         // What the builds will be prefixed with. "DEV" would make builds like "AwesomeProject - DEV 1 (githash)"
         // createJar just creates a jar file of the project.
         // buildTool is the build tool you use. Currently only maven and gradle are supported.
